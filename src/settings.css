@@ -1,0 +1,522 @@
+/* =========================
+   Tokens & base
+========================= */
+:root {
+    --white: #fff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-900: #111827;
+
+    --fuchsia-50: #fdf4ff;
+    --fuchsia-100: #f5d0fe;
+    --fuchsia-300: #f0abfc;
+    --fuchsia-500: #d946ef;
+    --fuchsia-600: #c026d3;
+    --fuchsia-700: #a21caf;
+
+    --blue-100: #dbeafe;
+    --blue-400: #60a5fa;
+    --blue-600: #2563eb;
+    --red-600: #dc2626;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+.font-inter {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+/* =========================
+   Basic utilities (subset)
+========================= */
+.bg-gray-50 {
+    background: var(--gray-50)
+}
+
+.bg-white {
+    background: var(--white)
+}
+
+.bg-fuchsia-50 {
+    background: var(--fuchsia-50)
+}
+
+.text-gray-900 {
+    color: var(--gray-900)
+}
+
+.text-gray-700 {
+    color: var(--gray-700)
+}
+
+.text-gray-600 {
+    color: var(--gray-600)
+}
+
+.text-gray-500 {
+    color: var(--gray-500)
+}
+
+.text-fuchsia-600 {
+    color: var(--fuchsia-600)
+}
+
+.text-fuchsia-700 {
+    color: var(--fuchsia-700)
+}
+
+.text-fuchsia-800 {
+    color: var(--fuchsia-700)
+}
+
+.text-red-600 {
+    color: var(--red-600)
+}
+
+.min-h-screen {
+    min-height: 100vh
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+.sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+}
+
+.lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem
+}
+
+.py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem
+}
+
+.p-4 {
+    padding: 1rem
+}
+
+.p-6 {
+    padding: 1.5rem
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem
+}
+
+.mt-6 {
+    margin-top: 1.5rem
+}
+
+.text-xs {
+    font-size: .75rem
+}
+
+.text-sm {
+    font-size: .875rem
+}
+
+.text-lg {
+    font-size: 1.125rem
+}
+
+.text-2xl {
+    font-size: 1.5rem
+}
+
+.font-medium {
+    font-weight: 500
+}
+
+.font-semibold {
+    font-weight: 600
+}
+
+.font-bold {
+    font-weight: 700
+}
+
+.flex {
+    display: flex
+}
+
+.inline-flex {
+    display: inline-flex
+}
+
+.items-center {
+    align-items: center
+}
+
+.justify-between {
+    justify-content: space-between
+}
+
+.space-x-8>*+* {
+    margin-left: 2rem
+}
+
+.grid {
+    display: grid
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+}
+
+.sticky {
+    position: sticky
+}
+
+.top-0 {
+    top: 0
+}
+
+.z-50 {
+    z-index: 50
+}
+
+.h-16 {
+    height: 4rem
+}
+
+.rounded-md {
+    border-radius: .375rem
+}
+
+.rounded-lg {
+    border-radius: .5rem
+}
+
+.rounded-full {
+    border-radius: 9999px
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06)
+}
+
+.border {
+    border: 1px solid var(--gray-300)
+}
+
+.border-b {
+    border-bottom: 1px solid var(--gray-200)
+}
+
+.border-b-2 {
+    border-bottom: 2px solid transparent
+}
+
+.border-gray-200 {
+    border-color: var(--gray-200)
+}
+
+.border-gray-300 {
+    border-color: var(--gray-300)
+}
+
+.border-fuchsia-500 {
+    border-color: var(--fuchsia-600)
+}
+
+.-mb-px {
+    margin-bottom: -1px
+}
+
+/* Hover helpers for tabs/links */
+.hover\:border-gray-300:hover {
+    border-color: var(--gray-300)
+}
+
+.hover\:text-gray-700:hover {
+    color: var(--gray-700)
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: 0
+}
+
+.bg-fuchsia-600 {
+    background: var(--fuchsia-600);
+    color: #fff
+}
+
+.bg-fuchsia-600:hover {
+    background: var(--fuchsia-700)
+}
+
+.bg-white.btn {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700)
+}
+
+.bg-white.btn:hover {
+    background: #fafafa
+}
+
+/* Focus rings */
+.focus\:ring-2:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(192, 38, 211, .35)
+}
+
+.focus\:ring-offset-2:focus {
+    box-shadow: 0 0 0 4px rgba(192, 38, 211, .25)
+}
+
+/* Links in nav */
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: .25rem .25rem .25rem;
+    line-height: 1.5;
+    border-bottom: 2px solid transparent;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--gray-500);
+}
+
+.nav-link.active {
+    border-color: var(--fuchsia-600);
+    color: var(--gray-900)
+}
+
+.nav-link:hover {
+    border-color: var(--gray-300);
+    color: var(--gray-700)
+}
+
+/* =========================
+   Forms
+========================= */
+select,
+input[type="number"],
+.text-input {
+    font: inherit;
+    color: inherit;
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+}
+
+select:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--fuchsia-600);
+    box-shadow: 0 0 0 3px rgba(192, 38, 211, .15);
+}
+
+.w-20 {
+    width: 5rem
+}
+
+.px-2 {
+    padding-left: .5rem;
+    padding-right: .5rem
+}
+
+.py-1 {
+    padding-top: .25rem;
+    padding-bottom: .25rem
+}
+
+/* Range slider used for α β γ δ */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: var(--gray-200);
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--fuchsia-600);
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px rgba(192, 38, 211, .35);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--fuchsia-600);
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: .25rem;
+    vertical-align: middle;
+}
+
+/* “sr-only” for hidden checkbox in toggle */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* iOS-like toggle using .peer and sibling div */
+label.inline-flex {
+    display: inline-flex;
+    align-items: center
+}
+
+.peer+div {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: var(--gray-200);
+    border-radius: 9999px;
+    transition: background .2s;
+}
+
+.peer+div::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    transition: transform .2s;
+}
+
+.peer:checked+div {
+    background: var(--fuchsia-600)
+}
+
+.peer:checked+div::after {
+    transform: translateX(20px)
+}
+
+/* focus ring when focusing the checkbox */
+.peer:focus+div {
+    box-shadow: 0 0 0 4px rgba(192, 38, 211, .25)
+}
+
+/* =========================
+   Cards / blocks
+========================= */
+.card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04)
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 1rem
+}
+
+.helper {
+    color: var(--gray-600);
+}
+
+/* Spacing stacks */
+.space-y-6>*+* {
+    margin-top: 1.5rem
+}
+
+.mb-4 {
+    margin-bottom: 1rem
+}
+
+/* Pills & info blocks */
+.info {
+    background: var(--fuchsia-50);
+    border-radius: .5rem;
+    padding: 1rem
+}
+
+/* Tab bar */
+.tabbar {
+    display: flex;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 1.5rem
+}
+
+.tabbar a {
+    padding: 1rem .25rem;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    font-size: .875rem;
+    color: var(--gray-500)
+}
+
+.tabbar a.active {
+    border-color: var(--fuchsia-600);
+    color: var(--fuchsia-600)
+}
+
+.tabbar a:hover {
+    border-color: var(--gray-300);
+    color: var(--gray-700)
+}
+
+/* Nav container look */
+nav.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06)
+}

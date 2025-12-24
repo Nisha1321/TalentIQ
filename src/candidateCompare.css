@@ -1,0 +1,389 @@
+/* page shell */
+.cc-page {
+    background: #f9fafb;
+    min-height: 100vh;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.cc-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 56px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+    display: grid;
+    grid-template-columns: 160px 1fr 160px;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.cc-title {
+    text-align: center;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* back link */
+.cc-back {
+    display: inline-flex;
+    align-items: center;
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cc-i {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+/* grid */
+.cc-grid {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* card */
+.cc-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+    padding: 24px;
+}
+
+.cc-name {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 10px;
+}
+
+/* chips */
+.cc-chips-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.cc-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cc-chip-amber {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* like 71% Match */
+.cc-chip-blue {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* like Screening */
+.cc-chip-red {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* gaps */
+.cc-chip-blue {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+/* adjacent (softer indigo) */
+
+/* radar */
+.cc-radar-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 24px;
+}
+
+.cc-radar {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: conic-gradient(#f5f3ff 0 60deg, #eff6ff 0 120deg, #fdf2f8 0 180deg, #fef2f2 0 240deg, #fefce8 0 300deg, #ecfdf5 0 360deg);
+    overflow: hidden;
+}
+
+.cc-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8b5cf6;
+    /* violet */
+    transform: translate(-50%, -50%);
+}
+
+/* section heads */
+.cc-section {
+    margin-top: 18px;
+}
+
+.cc-h3 {
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 10px;
+}
+
+/* skills */
+.cc-skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cc-skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.cc-skill-row:last-child {
+    border-bottom: 0;
+}
+
+.cc-skill {
+    color: #374151;
+}
+
+.cc-score {
+    font-weight: 600;
+}
+
+.cc-score-green {
+    color: #16a34a;
+}
+
+.cc-score-amber {
+    color: #ca8a04;
+}
+
+.cc-score-red {
+    color: #dc2626;
+}
+
+/* chip rows */
+.cc-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* page shell */
+.cc-page {
+    background: #f9fafb;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.cc-topbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.cc-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b21a8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cc-title {
+    font-weight: 800;
+    color: #111827;
+}
+
+/* grid */
+.cc-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (min-width:900px) {
+    .cc-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* card */
+.cc-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.cc-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.cc-chips-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* chips */
+.cc-chip {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 9999px;
+}
+
+.cc-chip-amber {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.cc-chip-blue {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.cc-chip-red {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.cc-chip-blue {
+    background: #dbeafe;
+    color: #1e3a8a;
+}
+
+/* radar */
+.cc-radar-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+}
+
+.cc-radar {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 9999px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(99, 102, 241, .06) 0 60%, transparent 60%),
+        conic-gradient(from 0deg, rgba(236, 72, 153, .05) 0 25%, rgba(59, 130, 246, .05) 0 50%, rgba(244, 63, 94, .05) 0 75%, rgba(234, 179, 8, .05) 0 100%);
+}
+
+.cc-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #a855f7;
+    border-radius: 9999px;
+    transform: translate(-50%, -50%);
+}
+
+/* skills */
+.cc-section {
+    margin-top: 14px;
+}
+
+.cc-h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #111827;
+}
+
+.cc-skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cc-skill-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 14px;
+}
+
+.cc-score {
+    font-weight: 700;
+}
+
+.cc-score-green {
+    color: #16a34a;
+}
+
+.cc-score-amber {
+    color: #d97706;
+}
+
+/* analysis rows */
+.cc-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* summary panel */
+.cc-summary {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.cc-summary-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.cc-summary-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.cc-summary-text {
+    color: #374151;
+    line-height: 1.5;
+}
+
+.cc-i {
+    width: 18px;
+    height: 18px;
+}
+
+.cc-i-fuchsia {
+    color: #c026d3;
+}

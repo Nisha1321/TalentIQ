@@ -1,0 +1,140 @@
+/* ========== wrapper ========== */
+.tiq-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+}
+
+.tiq-nav__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    /* brand | tabs | auth */
+    align-items: center;
+    gap: 16px;
+}
+
+/* ========== brand ========== */
+.tiq-brand {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: 800;
+}
+
+.tiq-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #c026d3, #ec4899);
+    display: inline-block;
+}
+
+/* ========== tabs (kills any legacy “pill” styles) ========== */
+.tiq-tabs {
+    /* hard reset of old pill container */
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+
+    display: inline-flex;
+    gap: 32px;
+    /* spacing between links */
+    align-items: center;
+}
+
+/* links */
+.tiq-tabs .tiq-link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    color: #4b5563;
+    padding: 8px 0;
+    /* taller click area */
+    /* nuke any pill backgrounds from old CSS */
+    background: none !important;
+    border-radius: 0 !important;
+}
+
+.tiq-tabs .tiq-link:hover {
+    color: #111827;
+    background: none !important;
+}
+
+/* active = simple underline */
+.tiq-tabs .tiq-link.is-active {
+    color: #111827;
+}
+
+.tiq-tabs .tiq-link.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: #c026d3;
+    border-radius: 2px;
+}
+
+/* ========== auth buttons ========== */
+.tiq-auth {
+    justify-self: end;
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.tiq-user {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.tiq-btn {
+    border-radius: 12px;
+    padding: 9px 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.tiq-btn--ghost {
+    background: #fff;
+    border-color: #e5e7eb;
+    color: #111827;
+}
+
+.tiq-btn--ghost:hover {
+    background: #f8fafc;
+}
+
+.tiq-btn--solid {
+    background: linear-gradient(135deg, #c026d3, #ec4899);
+    color: #fff;
+    border: 0;
+}
+
+.tiq-btn--solid:hover {
+    filter: brightness(.95);
+}
+
+/* ========== responsive ========== */
+@media (max-width: 900px) {
+    .tiq-tabs {
+        display: none;
+    }
+
+    .tiq-nav__inner {
+        grid-template-columns: 1fr auto;
+    }
+}

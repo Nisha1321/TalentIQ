@@ -1,0 +1,414 @@
+/* =========================
+   Design tokens
+========================= */
+:root {
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --fuchsia-500: #d946ef;
+  --fuchsia-600: #c026d3;
+  --fuchsia-700: #a21caf;
+
+  --blue-100: #dbeafe;
+  --blue-600: #2563eb;
+  --blue-800: #1e40af;
+  --yellow-100: #fef3c7;
+  --yellow-800: #854d0e;
+  --green-100: #dcfce7;
+  --green-800: #14532d;
+  --red-100: #fee2e2;
+  --red-600: #dc2626;
+}
+
+/* Font */
+.font-inter {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+}
+
+/* Basic utilities used on the page */
+.bg-white {
+  background: #fff
+}
+
+.bg-gray-50 {
+  background: var(--gray-50)
+}
+
+.bg-gray-900 {
+  background: var(--gray-900)
+}
+
+.text-white {
+  color: #fff
+}
+
+.text-gray-900 {
+  color: var(--gray-900)
+}
+
+.text-gray-700 {
+  color: var(--gray-700)
+}
+
+.text-gray-600 {
+  color: var(--gray-600)
+}
+
+.text-gray-500 {
+  color: var(--gray-500)
+}
+
+.text-gray-400 {
+  color: var(--gray-400)
+}
+
+.text-fuchsia-600 {
+  color: var(--fuchsia-600)
+}
+
+.text-blue-600 {
+  color: var(--blue-600)
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+  margin: 0 auto
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+  margin: 0 auto
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.sm\:px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+.lg\:px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+.py-16 {
+  padding: 4rem 0
+}
+
+.grid {
+  display: grid
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr))
+}
+
+.gap-12 {
+  gap: 3rem
+}
+
+.gap-8 {
+  gap: 2rem
+}
+
+.flex {
+  display: flex
+}
+
+.items-center {
+  align-items: center
+}
+
+.justify-between {
+  justify-content: space-between
+}
+
+.space-x-2>*+* {
+  margin-left: .5rem
+}
+
+.space-x-6>*+* {
+  margin-left: 1.5rem
+}
+
+.text-center {
+  text-align: center
+}
+
+.rounded-2xl {
+  border-radius: 1rem
+}
+
+.rounded-lg {
+  border-radius: .5rem
+}
+
+.rounded-full {
+  border-radius: 9999px
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06)
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .1)
+}
+
+.border {
+  border: 1px solid var(--gray-200)
+}
+
+.border-t {
+  border-top: 1px solid var(--gray-800)
+}
+
+.sticky {
+  position: sticky
+}
+
+.top-0 {
+  top: 0
+}
+
+.z-50 {
+  z-index: 50
+}
+
+.h-16 {
+  height: 4rem
+}
+
+button {
+  cursor: pointer;
+  border: none
+}
+
+.bg-fuchsia-600 {
+  background: var(--fuchsia-600);
+  color: #fff
+}
+
+.bg-fuchsia-600:hover {
+  background: var(--fuchsia-700)
+}
+
+.rounded-md {
+  border-radius: .375rem
+}
+
+.focus\:ring-2:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(217, 70, 239, .35)
+}
+
+.focus\:ring-offset-2:focus {
+  box-shadow: 0 0 0 4px rgba(217, 70, 239, .25)
+}
+
+@media(min-width:768px) {
+  .md\:ml-10 {
+    margin-left: 2.5rem
+  }
+
+  .md\:flex {
+    display: flex
+  }
+
+  .md\:hidden {
+    display: none
+  }
+
+  .md\:space-x-8>*+* {
+    margin-left: 2rem
+  }
+}
+
+/* Nav link helpers */
+a {
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--fuchsia-600) 0%, #ec4899 100%);
+  color: #fff;
+  padding: 80px 0 84px;
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.hero-h1 {
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+}
+
+.hero-sub {
+  font-size: clamp(18px, 2.2vw, 24px);
+  opacity: .95;
+  max-width: 920px;
+  margin: 0 auto 28px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: #fff;
+  color: #7c3aed;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .15);
+}
+
+.hero-btn:hover {
+  filter: brightness(0.98);
+}
+
+/* ===== PROBLEM / SOLUTION ===== */
+.ps-section {
+  background: #f3f4f6;
+  padding: 60px 0;
+}
+
+.ps-h2 {
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: .2px;
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 8px;
+}
+
+.ps-sub {
+  color: #4b5563;
+  font-size: 18px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* Always-horizontal 3 cards row */
+.features-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+
+/* Card styling */
+.feature-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 18px;
+  padding: 28px;
+  min-height: 280px;
+  box-shadow: 0 32px 50px -24px rgba(0, 0, 0, .18);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* tiny, consistent list avatar */
+.w-8.h-8.rounded-full {
+  font-size: 10px;
+  letter-spacing: .5px;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 40px 70px -28px rgba(0, 0, 0, .22);
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.feature-icon i {
+  width: 22px;
+  height: 22px
+}
+
+.feature-icon-red {
+  background: #fee2e2;
+  color: #dc2626
+}
+
+.feature-icon-amber {
+  background: #fef3c7;
+  color: #ca8a04
+}
+
+.feature-icon-indigo {
+  background: #e0e7ff;
+  color: #3730a3
+}
+
+.feature-title {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 26px;
+  color: #0f172a
+}
+
+.feature-body {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  font-size: 18px
+}
+
+.feature-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fuchsia-600);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.feature-link:hover {
+  text-decoration: underline
+}
+
+/* Gradient section reused for final CTA */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--fuchsia-600) 0%, #ec4899 100%)
+}
+
+/* Misc */
+.hidden {
+  display: none
+}
